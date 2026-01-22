@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>User Login Page</title>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;700;800&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<!-- Tailwind Configuration -->
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#141414",
+                        "background-light": "#f7f7f7",
+                        "background-dark": "#191919",
+                    },
+                    fontFamily: {
+                        "display": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                },
+            },
+        }
+    </script>
+<style>
+        /* Custom tweaks if needed */
+        body {
+            font-family: "Plus Jakarta Sans", sans-serif;
+        }
+    </style>
+</head>
+<body class="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-primary dark:text-white transition-colors duration-200">
+<!-- Top Navigation Bar -->
+<nav class="w-full bg-white dark:bg-[#1e1e1e] border-b border-[#f2f2f2] dark:border-[#333] px-6 md:px-10 py-4 flex items-center justify-between sticky top-0 z-50">
+<div class="flex items-center gap-4 text-primary dark:text-white">
+<div class="size-8 flex items-center justify-center bg-primary dark:bg-white text-white dark:text-primary rounded-lg">
+<span class="material-symbols-outlined text-xl">grid_view</span>
+</div>
+<h2 class="text-xl font-bold leading-tight tracking-tight">Nexus App</h2>
+</div>
+<div class="flex items-center gap-4">
+<span class="text-sm font-medium text-[#757575] dark:text-[#a0a0a0] hidden sm:block">Don't have an account?</span>
+<button class="flex cursor-pointer items-center justify-center overflow-hidden rounded-lg h-9 px-4 border border-[#e0e0e0] dark:border-[#444] hover:bg-[#f5f5f5] dark:hover:bg-[#333] transition-colors bg-white dark:bg-[#2a2a2a] text-primary dark:text-white text-sm font-bold leading-normal tracking-wide">
+<span class="truncate">Sign Up</span>
+</button>
+</div>
+</nav>
+<!-- Main Content Area -->
+<main class="flex-1 flex items-center justify-center p-4 sm:p-8">
+<div class="w-full max-w-[1000px] bg-white dark:bg-[#1e1e1e] rounded-2xl shadow-xl overflow-hidden flex flex-col md:flex-row min-h-[600px]">
+<!-- Left Side: Login Form -->
+<div class="flex-1 flex flex-col justify-center p-8 sm:p-12 lg:p-16 relative">
+<div class="max-w-[400px] w-full mx-auto">
+<!-- Heading -->
+<div class="flex flex-col gap-2 mb-10">
+<h1 class="text-primary dark:text-white tracking-tight text-3xl md:text-4xl font-extrabold leading-tight">Welcome back</h1>
+<p class="text-[#757575] dark:text-[#a0a0a0] text-base font-normal leading-normal">Please enter your details to sign in.</p>
+</div>
+<!-- Social Login (Optional but adds to modern feel) -->
+<div class="grid grid-cols-2 gap-4 mb-8">
+<button class="flex items-center justify-center h-12 rounded-lg border border-[#e0e0e0] dark:border-[#444] hover:bg-[#f9f9f9] dark:hover:bg-[#333] transition-colors">
+<img alt="Google" class="h-5 w-5 mr-2" data-alt="Google logo icon" src="https://lh3.googleusercontent.com/aida-public/AB6AXuByX5rBimpw0aF5hhll2HIkLoAP4at6G51s1Q7_EXCFMRMhGAtvM5up5w0hTS19tkQwvQYS1zdqdQ5KtEKNimo9qvGwJds77Uhd2yEtjD5Lp_4rLW-6JkwSWMcJYHwObGpQnJc0HjHt0y9CoWmuhLOwh0V5WIFvNsKU0FtCOnrPe2CdpXhHQqY8DhG_wZDnOwUnRjUya5MAUjeD-FqETdMiNsQCe_xCIbStOeW52bMhR3ndeoNlmPMub3H9PZuD-hmFEIe072Q2AJQ"/>
+<span class="text-sm font-semibold text-primary dark:text-white">Google</span>
+</button>
+<button class="flex items-center justify-center h-12 rounded-lg border border-[#e0e0e0] dark:border-[#444] hover:bg-[#f9f9f9] dark:hover:bg-[#333] transition-colors">
+<span class="material-symbols-outlined text-xl mr-2">ios</span>
+<span class="text-sm font-semibold text-primary dark:text-white">Apple</span>
+</button>
+</div>
+<div class="relative mb-8">
+<div class="absolute inset-0 flex items-center">
+<div class="w-full border-t border-[#e0e0e0] dark:border-[#333]"></div>
+</div>
+<div class="relative flex justify-center text-sm">
+<span class="bg-white dark:bg-[#1e1e1e] px-2 text-[#757575] dark:text-[#a0a0a0]">Or sign in with email</span>
+</div>
+</div>
+<!-- Form Inputs -->
+<form class="flex flex-col gap-5">
+<label class="flex flex-col gap-1.5">
+<span class="text-primary dark:text-white text-sm font-semibold leading-normal">Email Address</span>
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#757575] dark:text-[#a0a0a0]">
+<span class="material-symbols-outlined text-xl">mail</span>
+</span>
+<input class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:focus:ring-white/20 border border-[#e0e0e0] dark:border-[#444] bg-white dark:bg-[#2a2a2a] focus:border-primary dark:focus:border-white h-12 pl-12 pr-4 placeholder:text-[#a0a0a0] text-sm font-normal leading-normal transition-all" placeholder="user@example.com" type="email"/>
+</div>
+</label>
+<label class="flex flex-col gap-1.5">
+<div class="flex justify-between items-center">
+<span class="text-primary dark:text-white text-sm font-semibold leading-normal">Password</span>
+</div>
+<div class="relative group">
+<span class="absolute left-4 top-1/2 -translate-y-1/2 text-[#757575] dark:text-[#a0a0a0]">
+<span class="material-symbols-outlined text-xl">lock</span>
+</span>
+<input class="form-input flex w-full min-w-0 resize-none overflow-hidden rounded-lg text-primary dark:text-white focus:outline-0 focus:ring-2 focus:ring-primary/20 dark:focus:ring-white/20 border border-[#e0e0e0] dark:border-[#444] bg-white dark:bg-[#2a2a2a] focus:border-primary dark:focus:border-white h-12 pl-12 pr-4 placeholder:text-[#a0a0a0] text-sm font-normal leading-normal transition-all" placeholder="••••••••" type="password"/>
+</div>
+</label>
+<div class="flex items-center justify-between mt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input class="rounded border-gray-300 text-primary focus:ring-primary/20 w-4 h-4 bg-gray-50 dark:bg-[#2a2a2a] dark:border-[#444]" type="checkbox"/>
+<span class="text-xs font-medium text-[#757575] dark:text-[#a0a0a0]">Remember me</span>
+</label>
+<a class="text-xs font-bold text-primary dark:text-white hover:underline" href="#">Forgot password?</a>
+</div>
+<!-- Sign In Button -->
+<button class="mt-4 flex w-full cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-primary dark:bg-white text-white dark:text-primary hover:bg-black/90 dark:hover:bg-white/90 transition-colors text-base font-bold leading-normal tracking-wide shadow-md shadow-primary/10">
+<span class="truncate">Sign In</span>
+</button>
+</form>
+</div>
+</div>
+<!-- Right Side: Decorative Image / Branding -->
+<div class="hidden md:block w-1/2 bg-[#f0f0f0] dark:bg-[#111] relative overflow-hidden">
+<div class="absolute inset-0 bg-cover bg-center" data-alt="Abstract black and white architectural geometric patterns" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDsxLAMpC3_ruz_14uRE_alSQ0OAHfE2SEDX1GGJ6gKn7XHksPpOguDn1x1x1eJCP_4hVhO86me6OQrgLYEhJ-zDRsOnZcieQlOQJOHkjRm9MmaikPz7h5fzMugDpOSaKcEv1l4NcC30M6osWp_GeKLBpUZEDWBs9McEEL_E8xlPHpLbaw4-zzF0VLqWvkXCWDfS9f--GtR2lSkdKsGLigytPDNfzRZHyy0uAl611PgWqGWU7UngAinTsXVbNUpZEXlo50uNqzYIbw');">
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 to-transparent mix-blend-multiply"></div>
+</div>
+<div class="absolute bottom-0 left-0 w-full p-12 text-white z-10">
+<div class="size-12 mb-6 bg-white/20 backdrop-blur-md rounded-xl flex items-center justify-center">
+<span class="material-symbols-outlined text-3xl text-white">auto_awesome</span>
+</div>
+<blockquote class="text-2xl font-bold leading-snug mb-4 text-shadow-sm">
+                        "Simplicity is the ultimate sophistication. Design is intelligence made visible."
+                    </blockquote>
+<p class="text-white/80 font-medium">— Design Philosophy</p>
+</div>
+</div>
+</div>
+</main>
+</body></html>
